@@ -1,0 +1,184 @@
+// .App {
+//   font-family: sans-serif;
+//   text-align: center;
+// }
+
+$color-primary-0: #5f7dc6;
+$color-primary-1: #b6c6f0;
+$color-primary-2: #869fdd;
+$color-primary-3: #4160ad;
+$color-primary-4: #27489d;
+
+$color-secondary-1-0: #d95baa;
+$color-secondary-1-1: #f5b2dc;
+$color-secondary-1-2: #e882c2;
+$color-secondary-1-3: #c83c94;
+$color-secondary-1-4: #b61d7d;
+
+$color-secondary-2-0: #caf566;
+$color-secondary-2-1: #e8fcb8;
+$color-secondary-2-2: #d8f98b;
+$color-secondary-2-3: #bef048;
+$color-secondary-2-4: #a4db23;
+
+$color-complement-0: #ffce6b;
+$color-complement-1: #ffe8ba;
+$color-complement-2: #ffda8f;
+$color-complement-3: #ffc44c;
+$color-complement-4: #e9a925;
+
+.container {
+  display: grid;
+  grid-template-rows: 25px 113px 665px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 0;
+  grid-template-areas: "nb nb nb nb nb nb nb nb nb nb nb nb" "pd pd pd pd pd pd dh dh dh dh dh dh" "ts ts ts ts ts ts dh dh dh dh dh dh";
+}
+
+.navbar-region {
+  grid-area: nb;
+  background-color: $color-primary-4;
+  color: white;
+  border-radius: 4px;
+}
+
+.probdesc-region {
+  grid-area: pd;
+}
+
+.tabs-region {
+  grid-area: ts;
+}
+
+.dlghist-region {
+  grid-area: dh;
+}
+
+p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+p:first-child {
+  margin-top: 4px;
+}
+
+p:last-child {
+  margin-bottom: 4px;
+}
+
+.panel {
+  height: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  border-radius: 4px;
+}
+
+.panel-header {
+  height: 20px;
+  width: 100%;
+  background-color: $color-primary-0;
+  color: white;
+  border-radius: 4px;
+}
+
+.panel-title {
+  margin-left: 5px;
+}
+
+.panel-body {
+  height: calc(100% - 25px);
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.collapsed {
+  display: none;
+}
+
+.navitem {
+  margin-left: 20px;
+}
+
+.navitem.branding {
+  margin-left: 10px;
+}
+
+.navitem.user {
+  float: right;
+  margin-right: 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.tutor {
+  background-color: $color-complement-1;
+}
+
+// .student {
+//   //background-color: $color-complement-1;
+// }
+
+// .student-form {
+//   //background-color: $color-complement-1;
+// }
+
+.tabs {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+
+.tabs button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+
+.tabs button:hover {
+  background-color: #ddd;
+  /* color: white; */
+}
+
+/* Create an active/current tablink class */
+
+.tabs button.active {
+  background-color: $color-primary-3;
+  color: white;
+}
+
+/* Style the tab content */
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tabcontent.active {
+  display: block;
+  border: none;
+}
+
+.btn-submit {
+  background-color: $color-secondary-2-0;
+  border-radius: 2px;
+}
+
+progress[value] {
+  width: 100px;
+}

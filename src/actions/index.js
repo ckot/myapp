@@ -1,0 +1,26 @@
+
+const TAB_SET_CONTENT = 'TAB_SET_CONTENT';
+const TAB_ACTIVATE = 'TAB_ACTIVATE';
+const TAB_SHOW = 'TAB_SHOW';
+const TAB_HIDE = 'TAB_HIDE';
+
+const TURN_CREATE = 'TURN_CREATE';
+const TURN_SUBMIT_STUDENT_TURN = 'TURN_SUBMIT_STUDENT_TURN';
+const TURN_SUBMIT_WIZARD_TURN = 'TURN_SUBMIT_WIZARD_TURN';
+
+export const userActivateTab = id => ({
+  type: TAB_ACTIVATE,
+  source: 'user',
+  id
+})
+
+export const actions = {
+  TAB_SET_CONTENT,
+  TAB_ACTIVATE,
+  TAB_SHOW,
+  TAB_HIDE,
+  TURN_CREATE,
+  TURN_SUBMIT_STUDENT_TURN,
+  TURN_SUBMIT_WIZARD_TURN
+};
+
