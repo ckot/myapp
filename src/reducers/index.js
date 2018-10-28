@@ -1,9 +1,14 @@
 import { combineReducers } from 'redux'
 
-import tabs from './tabs.js';
-import turns from './turns.js';
+// import assets from './assets';
+import problem from './problem';
+import tabs from './tabs';
+import turns from './turns';
+import user from './user';
 
 export default combineReducers({
+  problem,
   tabs,
-  turns
+  turns,
+  user
 });

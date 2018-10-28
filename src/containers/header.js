@@ -4,9 +4,9 @@ import React from 'react';
 import Navbar from '../components/navbar';
 
 const mapStateToProps = state => ({
-  user: state.user,
-  title: state.problem.title,
-  progress: state.problem.progress
+  userName: state.user.name,
+  probName: state.problem.name,
+  probProgress: state.problem.progress
 })
 
 export default connect(

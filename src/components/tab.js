@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Tab = ({id, label, type, active, visible, activateTab}) => {
+const Tab = ({id, label, type, active, visible, onClick}) => {
   const isActive = active ? "active" : "";
   return (
     <button 
       className={`tablink ${isActive}`}
-      onClick={() => activateTab(id)}>
+      onClick={onClick}>
       {label}
     </button>
   );

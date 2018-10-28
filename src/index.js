@@ -9,46 +9,43 @@ import rootReducer from './reducers';
 import "./styles.scss";
 
 const initialState = {
-  user: "Foo",
+  user: {
+    name: "Foo"
+  },
   problem: {
-    title: "Bar Problem",
+    name: "Bar",
     statement: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at ligula eu nibh finibus feugiat.",
-      "Praesent tincidunt congue tempus. Phasellus massa diam, vulputate a tincidunt at, mattis eget leo."
+      "Suppose you aim a bow horizontally, directly at the center of a target 25.0 m away from you. If the speed of the arrow is 60 m / s, how far from the center of the target will it strike the target ? That is, find the vertical displacement of the arrow while it is in flight.",
+      "Assume there is no air friction."
     ],
-    progress: 0
+    progress: 10
   },
   tabs: [
     {
       id: "video",
       type: "video",
       label: "Video",
-      content: null,
+      content: "https://www.educreations.com/lesson/embed/38323729/?ref=embed",
       active: true,
       visible: true
     },
     {
       id: "fig1",
       type: "image",
-      content: null,
-      label: "Fig. 1",
+      content: "http://frank.lrdc.pitt.edu/rimac_static/img/P2.png",
+      label: "Figure 1",
       active: false,
-      visible: false
+      visible: true
     },
     {
       id: "fig2",
       type: "image",
-      content: null,
-      label: "Fig. 2",
+      content: "http://frank.lrdc.pitt.edu/rimac_static/img/P3.png",
+      label: "Figure 2",
       active: false,
       visible: true
     }
   ],
-  assets: {
-    probVideo: "http://foo.com/assets/1",
-    img1: "http://foo.com/static/img1.png",
-    img2: "http://foo.com/static/imag2.png"
-  },
   turns: [
     {
       tutor: "What is the weight of an unladen swallow?",
@@ -83,7 +80,7 @@ const initialState = {
       student: "foo bar baz."
     },
     {
-      tutor: "So, if the parcel weights 10 g, what is the total weight?",
+      tutor: "So, if the swallow weighs 42g and parcel weights 10 g, what is the weight of the <b>laden</b> swallow?",
       studentForm: {
         formType: "lansq"
       }

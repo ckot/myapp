@@ -1,6 +1,8 @@
 import React from "react";
 
+import ImageTabPane from './imageTabPane';
 import Tab from "./tab";
+import VideoTabPane from './videoTabPane';
 
 const Tabs = ({tabs, activateTab}) => {
   
@@ -11,14 +13,27 @@ const Tabs = ({tabs, activateTab}) => {
         type={tab.type}
         active={tab.active}
         visible={tab.visible} 
-        onClick={activateTab}
+        onClick={() => activateTab(tab.id)}
     />
   ));
+  
+  const activeTab = tabs.find((t) => t.active === true);
+  let activeTabContent;
+  switch(activeTab.type) {  
+    case "video":
+      activeTabContent = <VideoTabPane content={activeTab.content}/>
+      break;
+    case "image":
+      activeTabContent = <ImageTabPane content={activeTab.content}/>;
+      break;
+    default:
+      activateTabContent = 'Unknown content';
+  }
   return (
     <div className={"panel tabs-region"}>
       <div className="tabs">{tabBtns}</div>
       <div className="tabcontent active">
-        active tab's content to be displayed here
+        {activeTabContent}
       </div>
     </div>
   );

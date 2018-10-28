@@ -33,7 +33,10 @@ $color-complement-4: #e9a925;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 2px;
   grid-row-gap: 0;
-  grid-template-areas: "nb nb nb nb nb nb nb nb nb nb nb nb" "pd pd pd pd pd pd dh dh dh dh dh dh" "ts ts ts ts ts ts dh dh dh dh dh dh";
+  grid-template-areas: 
+    "nb nb nb nb nb nb nb nb nb nb nb nb"
+    "pd pd pd pd pd pd pd dh dh dh dh dh"
+    "ts ts ts ts ts ts ts dh dh dh dh dh";
 }
 
 .navbar-region {

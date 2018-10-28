@@ -1,4 +1,9 @@
 
+
+const USER_LOGIN = 'USER_LOGIN';
+
+const SCENARIO_START = 'START_SCENARIO';
+
 const TAB_SET_CONTENT = 'TAB_SET_CONTENT';
 const TAB_ACTIVATE = 'TAB_ACTIVATE';
 const TAB_SHOW = 'TAB_SHOW';
@@ -15,6 +20,8 @@ export const userActivateTab = id => ({
 })
 
 export const actions = {
+  USER_LOGIN,
+  SCENARIO_START,
   TAB_SET_CONTENT,
   TAB_ACTIVATE,
   TAB_SHOW,

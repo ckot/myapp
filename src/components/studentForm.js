@@ -6,7 +6,7 @@ function StudentForm(props) {
   const form = props.turn.studentForm;
 
   if (isDefined(form)) {
-    return <div className="student-form">{form.formType}</div>
+    return <div className="student-form">formType: {form.formType}</div>
   }
   return null;
 }

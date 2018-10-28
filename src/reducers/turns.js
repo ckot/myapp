@@ -3,7 +3,7 @@ import { actions } from '../actions';
 let nextTurnId = 0;
 
 const turnsReducer = (state = [], action) => {
-  switch(action) {
+  switch(action.type) {
     case actions.CREATE_TURN: 
       return [
         ...state, { 
