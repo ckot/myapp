@@ -3,9 +3,11 @@ import React from "react";
 import Panel from "./panel";
 import Turn from "./turn";
 
-const DialogueHistory = ({turns}) => {
-  const children = turns.map((turn, idx) => (
-    <Turn key={idx.toString()} turn={turn} />
+const DialogueHistory = (props) => {
+  const children = props.turns.map((turn, idx) => (
+    <Turn studentResponseHandler={props.handleStudentTurn}
+          key={idx.toString()}
+          turn={turn} />
   ));
 
   return (

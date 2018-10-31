@@ -18,16 +18,18 @@ const Tabs = ({tabs, activateTab}) => {
   ));
   
   const activeTab = tabs.find((t) => t.active === true);
-  let activeTabContent;
-  switch(activeTab.type) {  
-    case "video":
-      activeTabContent = <VideoTabPane content={activeTab.content}/>
-      break;
-    case "image":
-      activeTabContent = <ImageTabPane content={activeTab.content}/>;
-      break;
-    default:
-      activateTabContent = 'Unknown content';
+  let activeTabContent = null;
+  if (!!activeTab) {
+    switch(activeTab.type) {  
+      case "video":
+        activeTabContent = <VideoTabPane content={activeTab.content}/>
+        break;
+      case "image":
+        activeTabContent = <ImageTabPane content={activeTab.content}/>;
+        break;
+      default:
+        activateTabContent = 'Unknown content';
+    }
   }
   return (
     <div className={"panel tabs-region"}>

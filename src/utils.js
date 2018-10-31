@@ -1,6 +1,7 @@
-function isDefined(property) {
+const isDefined = (property) => {
   return typeof property !== 'undefined' && property !== null;
 }
+
 export {
   isDefined
 };

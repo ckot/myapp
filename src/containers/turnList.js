@@ -1,6 +1,11 @@
 import { connect } from 'react-redux';
 import React from 'react';
 
+import {
+  handleStudentResponse,
+  removeStudentForm
+} from '../actions';
+
 import DialogueHistory from '../components/dlgHist';
 
 const mapStateToProps = state => ({
@@ -8,9 +13,10 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  submitTutorTurn: id => dispatch((id)),
-  submitWizardTurn: id => dispatch((id))
+  handleStudentTurn: (id, serverValue, displayValue) => 
+    dispatch(handleStudentResponse(id, serverValue, displayValue))
 })
+// handleWizardTurn: (id, value) => dispatch((id))
 
 export default connect(
   mapStateToProps,
